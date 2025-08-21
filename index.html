@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌤️ Weather App by Neuro</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="logo">🌤️</span>
+      <h1>WeatherApp by Neuro</h1>
+    </div>
+    <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="container">
+    <section class="search-card card">
+      <h2>Find weather by city</h2>
+      <form id="searchForm">
+        <input id="cityInput" type="text" placeholder="Type a city (e.g., Pune)" autocomplete="off" required/>
+        <button type="submit">Get Weather</button>
+      </form>
+
+      <div id="choices" class="choices hidden"></div>
+      <p id="status" class="status" role="status"></p>
+    </section>
+
+    <section id="current" class="grid-2">
+      <div id="currentCard" class="card"></div>
+      <div id="detailsCard" class="card"></div>
+    </section>
+
+    <section class="card">
+      <h2>Next 5 days</h2>
+      <div id="forecast" class="forecast-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open‑Meteo</a>. Built with ❤️ By Neuro.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
